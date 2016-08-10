@@ -8,3 +8,4 @@
 
 [DISTANCIA](https://github.com/jeroendoggen/Arduino-distance-sensor-library)
 
+[EEPROM](https://github.com/thijse/Arduino-EEPROMEx)

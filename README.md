@@ -10,6 +10,6 @@
 
 [DISTANCIA](http://playground.arduino.cc/Code/NewPing)
 
-[LUZ](https://github.com/Genotronex/BH1750FVI_Master)
+[LUZ](https://github.com/claws/BH1750)
 
 [EEPROM](https://github.com/thijse/Arduino-EEPROMEx)

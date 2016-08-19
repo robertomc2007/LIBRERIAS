@@ -8,7 +8,7 @@
 
 [COMUNICACIONES](http://www.airspayce.com/mikem/arduino/RadioHead/)
 
-[DISTANCIA](https://github.com/jeroendoggen/Arduino-distance-sensor-library)
+[DISTANCIA](http://playground.arduino.cc/Code/NewPing)
 
 [LUZ](https://github.com/Genotronex/BH1750FVI_Master)
 

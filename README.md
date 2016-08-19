@@ -1,5 +1,7 @@
 # LIBRERIAS
 
+[TIMER](http://playground.arduino.cc/Code/SimpleTimer)
+
 [ALIMENTACIÓN](https://github.com/Yveaux/Arduino_Vcc)
 
 [LOWPOWER](https://github.com/rocketscream/Low-Power)

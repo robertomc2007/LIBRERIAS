@@ -1,29 +1,29 @@
 # LIBRERIAS
 
-RTOS
+## RTOS
 
 [CUASI-TAREAS](http://playground.arduino.cc/Code/SimpleTimer)
 
-GESTIÓN DE ENERGÍA
+## GESTIÓN DE ENERGÍA
 
 [ALIMENTACIÓN](https://github.com/Yveaux/Arduino_Vcc)
 
 [LOWPOWER](https://github.com/rocketscream/Low-Power)
 
-COMUNICACIONES
+## COMUNICACIONES
 
 [SOFTWARESERIAL](https://www.arduino.cc/en/Reference/SoftwareSerial)
 
 [RADIOHEAD](http://www.airspayce.com/mikem/arduino/RadioHead/)
 
-TELEMETRÍA
+## TELEMETRÍA
 
 [DISTANCIA](http://playground.arduino.cc/Code/NewPing)
 
-LUZ
+## LUZ
 
-[LUZ](https://github.com/claws/BH1750)
+[SENSOR DIGITAL](https://github.com/claws/BH1750)
 
-MEMORIA
+## MEMORIA
 
 [EEPROM](https://github.com/thijse/Arduino-EEPROMEx)

@@ -33,7 +33,9 @@ NOTA2: Si no existe todavía el subdirectorio /libraries/ , crearlo manualmente.
 
 *Reiniciar IDE.
 
-[SENSOR DIGITAL BH1750](https://github.com/claws/BH1750)
+[SENSOR DIGITAL BH1750 BASICO](https://github.com/claws/BH1750)
+
+[SENSOR DIGITAL BH1750 AVANZADO](https://github.com/tuxcell/bh1750xtra)
 
 ## MEMORIA
 

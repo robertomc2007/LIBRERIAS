@@ -22,7 +22,15 @@
 
 ## LUZ
 
-[SENSOR DIGITAL](https://github.com/claws/BH1750)
+El uso de esta librería requiere de operaciones manual ya que no se encuentra en los formatos de descarga/actualización automática (Programa/Incluir librería/Incluir Librerías) ni en el formato de incorporación comprimida (Programa/Incluir librería/Añadir Librería .ZIP...). Los pasos son:
+
+*Descargar la librería (.zip).
+
+*Descomprimir en directorio <arduinosketchfolder>/libraries/BH1750.
+
+*Reiniciar IDE.
+
+[SENSOR DIGITAL BH1750](https://github.com/claws/BH1750)
 
 ## MEMORIA
 

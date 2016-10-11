@@ -26,7 +26,7 @@ El uso de esta librería requiere de operaciones manual ya que no se encuentra e
 
 *Descargar la librería (.zip).
 
-*Descomprimir en directorio <arduinosketchfolder>/libraries/BH1750.
+*Descomprimir en directorio /arduino_sketch_folder/libraries/BH1750.
 
 *Reiniciar IDE.
 

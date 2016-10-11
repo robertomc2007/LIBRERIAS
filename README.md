@@ -28,6 +28,9 @@ El uso de esta librería requiere de operaciones manual ya que no se encuentra e
 
 *Descomprimir en directorio /arduino_sketch_folder/libraries/BH1750.
 
+NOTA1: El directorio /arduino_sketch_folder/ debería estar en Documentos/Arduino.
+NOTA2: Si no existe todavía el subdirectorio /libraries/ , crearlo manualmente.
+
 *Reiniciar IDE.
 
 [SENSOR DIGITAL BH1750](https://github.com/claws/BH1750)

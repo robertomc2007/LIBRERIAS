@@ -22,7 +22,7 @@
 
 ## LUZ
 
-El uso de esta librería requiere de operaciones manual ya que no se encuentra en los formatos de descarga/actualización automática (Programa/Incluir librería/Incluir Librerías) ni en el formato de incorporación comprimida (Programa/Incluir librería/Añadir Librería .ZIP...). Los pasos son:
+El uso de esta librería requiere de operaciones manuales ya que no se encuentra en los formatos de descarga/actualización automática (Programa/Incluir librería/Incluir Librerías) ni en el formato de incorporación comprimida (Programa/Incluir librería/Añadir Librería .ZIP...). Los pasos son:
 
 *Descargar la librería (.zip).
 

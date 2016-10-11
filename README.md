@@ -1,5 +1,9 @@
 # LIBRERIAS
 
+## PÁGINA DE REFERENCIA
+
+[LIBRERÍAS ARDUINO](http://playground.arduino.cc/Main/LibraryList)
+
 ## RTOS
 
 [CUASI-TAREAS](http://playground.arduino.cc/Code/SimpleTimer)

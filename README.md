@@ -58,56 +58,41 @@ Supongamos que tenemos una bateria de 6V 4AH, y nuestro modelo consume 2A (supon
 
 ### [Cálculo estimado de la autonomia en baterias alcalinas](http://www.digikey.com/es/resources/conversion-calculators/conversion-calculator-battery-life)
 
-### Cálculo estimado de la autonomía en baterias Li-Ion (Sin corrección de Peukert. Consumos constantes inferiores a 0,2 Amperios)
+### Cálculo estimado de la autonomía en baterias Li-Ion (Consumos promedio inferiores a 0,2 Amperios)
 
 La aproximación se efectúa desde el punto de vista energético y se comienza estimando la energía disponible para alimentar un circuito electrónico desde una celda del tipo Li-Ion. Por ejemplo las características de la celda pueden ser:
 
 Capacidad: 1.500 mAh
+
 Voltaje:   3,7V
+
+H: 7hs
+
+k: 1,05
 
 Los circuitos electrónicos se alimentan con tensiones nominales de 3,3 Voltios o 5 Voltios, por lo tanto una adecuación a estos valores debe hacerse por medio de un regulador que oficie de fuente adecuada. La eficiencia promedio de estos reguladores se estima en:
 
-85% o sea, un factor de 0,85
+85% o sea, una eficiencia de 0,85
 
-Luego los cálculos preliminares de energía disponible para ser consumida serán:
+Usando un circuito de controlador con sensores que en total consumen 40 miliAmperios con alimentación de 5Voltios, la corriente total requerida afectada por la eficiencia del conversor será:
 
-Energía Total Ideal = Voltage_Li-Ion x Capacidad_Li-Ion = 3,7volts x 1.500mAh = 5550 mWh = 5,55 Wh = 19.980.000 mWs (llevado a segundos)
+Itotal_constante = 40 miliAmperios / 0,85 = 47 mA.
 
-Energía Total Disponible = 0,85 x Energia Total Ideal = 16.983.000 mWs
+Si se mantiene siempre funcionando, aplicamos la ecuación de duración lo que arrojaría:
 
-Usando un circuito de controlador con sensores que en total consumen 40 miliAmperios con alimentación de 5Voltios, la Potencia disipada real será:
+### 7/((47 x 7)/1.500)**1,05) = 34,43 Hs, o sea 1 día con 10 Hs
 
-Potencia Real = 5Voltios x 40 miliAmperios = 200 miliWatts = 0,2 Watts
+Usando estrategias de reducción de potencia, se define el ciclo de consumo de corriente en un circuito como sigue:
 
-Si se mantiene siempre funcionando, por ejemplo por 12 segundos, la Energía total consumida sería:
+Icorriente promedio = (tEncendido X Iencendido + tApagado x Iapagado)/TiempoTotal
 
-Energía Total Consumida_12segundos = 200 mW x 12 segundos = 2400 mW_12segundos
+Por ejemplo, al mantener los mismos elementos encendidos durante 4 Segundos con un consumo total del orden de 40 miliAmperios y apagar todos los componentes durante 30 Segundos con un consumo total del orden de 1 miliAmperio, entonces el consumo promedio sería:
 
-Usando estrategias de reducción de potencia, se define el ciclo de energía de un circuito como sigue:
+(4 segundos x 40 mA + 30 segundos x 1 mA)/34 segundos = 5,59 mA.
 
-Energía_Ciclo_tTotal = Voltage_Circuito x (tEncendido X Iencendido + tApagado x Iapagado)
+Ahora la ecuación daría:
 
-En un caso común de mantener todos los elementos encendidos durante 4 Segundos con un consumo total del orden de 40 miliAmperios y apagar todos los componentes durante 8 Segundos con un consumo total del orden de 10 miliAmperios, entonces el consumo sería:
-
-Energía_Ciclo_12segundos = 5Voltios x (4s x 40 mA + 8s x 10 mA) = 5Voltios x (160 mAs + 80 mAs) = 1.200  mW_12segundos
-
-Comparando el consumo cuando el circuito está siempre energizado con el consumo en un ciclo de trabajo con estrategias de baja potencia:
-
-Energía Total Consumida_12segundos = 2.400 = 200 mWs (prom)
-
-Energía_Ciclo_12segundos = 1.200 = 100 mWs (prom)
-
-resulta que los requerimientos se reducen a la mitad, con lo cual, la duración de la batería llegaría tal vez al doble; una estimación sería, para los casos expuestos la siguiente:
-
-Circuito Energizado Continuamente = 23h 30'
-
-Circuito Energizado periódicamente = 47h 10'
-
-En la práctica, es común mantener plazos de inactividad del orden de los 30 segundos, y obtener reducciones de corriente eléctrica en los módulos del orden de 100 microAmperios (0,1 miliAmperios) con lo cual el ejemplo arrojaría una duración del orden de:
-
-Energía_Ciclo_34segundos = 5Voltios x (4s x 40 mA + 30s x 0,1 mA) = 5Voltios x (160 mAs + 3 mAs) = 5V x 163 mAs (34 segundos) = 24 mWs
-
-Es decir, 196,5635 horas, o sea, 8 días 4 horas y 33 minutos.
+### 7/((5,59 x 7)/1.500)**1,05) = 322,002 Hs, o sea 13 días con 10 Hs.
 
 ## COMUNICACIONES
 

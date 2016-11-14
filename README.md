@@ -22,7 +22,7 @@
 
 [LOWPOWER](https://github.com/rocketscream/Low-Power)
 
-###Cálculo de la autonomia en baterias de gel y plomo ácido
+### Cálculo estimado de la autonomia en baterias de gel y plomo ácido
 
 Aplicación de la fórmula y exponente de Peukert
 
@@ -55,6 +55,8 @@ Veamos un ejemplo:
 Supongamos que tenemos una bateria de 6V 4AH, y nuestro modelo consume 2A (supongamos un consumo constante promediándolo), supongamos también que la bateria entrega 4AH equivalente en 20H (salvo se especifique lo contrario); tomemos también 1.1 como exponente de Peukert para las baterias de gel, entonces tenemos:
 
 #### 20/((2 x 20)/4)**1.1) = 1,59hs = 1h 35'
+
+### [Cálculo estimado de la autonomia en baterias alcalinas](http://www.digikey.com/es/resources/conversion-calculators/conversion-calculator-battery-life)
 
 ## COMUNICACIONES
 

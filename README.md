@@ -58,6 +58,29 @@ Supongamos que tenemos una bateria de 6V 4AH, y nuestro modelo consume 2A (supon
 
 ### [Cálculo estimado de la autonomia en baterias alcalinas](http://www.digikey.com/es/resources/conversion-calculators/conversion-calculator-battery-life)
 
+### Cálculo estimado de la autonomía en baterias Li-Ion
+
+La aproximación se efectúa desde el punto de vista energético y se comienza estimando la potencia disponible para alimentar un circuito electrónico desde una celda del tipo Li-Ion. Por ejemplo las características de la celda pueden ser:
+
+Capacidad: 1.500 mAh
+Voltaje:   3,7V
+
+Los circuitos electrónicos se limentan con tensiones nominales de 3,3Voltios o 5Voltios, por lo tanto una adecuación a estos valores debe hacerse por medio de un regulador que oficie de fuente adecuada. La eficiencia promedio de estos reguladores se estima en:
+
+85% o sea, un factor de 0,85
+
+Luego los cálculos preliminares de energía disponible para ser consumida serán:
+
+Potencia Total Ideal = Voltage_Li-Ion x Capacidad_Li-Ion = 3,7volts x 1.500mAh = 5550 mWh = 5,55 Wh = 19.980.000 mWs (llevado a segundos)
+
+Usando estrategias de reducción de energía, se define el ciclo de potencia de un circuito como sigue:
+
+Energía_Ciclo = Voltage_Circuito x (tEncendido X Iencendido + tApagado x Iapagado)
+
+En un caso común de mantener todos los elementos encendidos durante 4 Segundos con un consumo total del orden de 40 miliAmperios y apagar todos los componentes durante 8 Segundos con un consumo total del orden de 10 miliAmperios, entonces el consumo sería:
+
+Energía_Ciclo = 5Voltios x (4s x 40 mA + 8s x 10 mA) = 5Voltios x (160 mAs + 80 mAs) = 
+
 ## COMUNICACIONES
 
 [SOFTWARESERIAL](https://www.arduino.cc/en/Reference/SoftwareSerial)

@@ -22,7 +22,7 @@
 
 [LOWPOWER](https://github.com/rocketscream/Low-Power)
 
-### Cálculo estimado de la autonomia en baterias de gel y plomo ácido
+### Cálculo estimado de la autonomia en baterias de gel y plomo ácido (Consumos de corriente superiores a 1 Amperio)
 
 Aplicación de la fórmula y exponente de Peukert
 
@@ -58,7 +58,7 @@ Supongamos que tenemos una bateria de 6V 4AH, y nuestro modelo consume 2A (supon
 
 ### [Cálculo estimado de la autonomia en baterias alcalinas](http://www.digikey.com/es/resources/conversion-calculators/conversion-calculator-battery-life)
 
-### Cálculo estimado de la autonomía en baterias Li-Ion
+### Cálculo estimado de la autonomía en baterias Li-Ion (Sin corrección de Peukert. Consumos constantes inferiores a 0,2 Amperios)
 
 La aproximación se efectúa desde el punto de vista energético y se comienza estimando la potencia disponible para alimentar un circuito electrónico desde una celda del tipo Li-Ion. Por ejemplo las características de la celda pueden ser:
 
@@ -71,15 +71,41 @@ Los circuitos electrónicos se limentan con tensiones nominales de 3,3Voltios o 
 
 Luego los cálculos preliminares de energía disponible para ser consumida serán:
 
-Potencia Total Ideal = Voltage_Li-Ion x Capacidad_Li-Ion = 3,7volts x 1.500mAh = 5550 mWh = 5,55 Wh = 19.980.000 mWs (llevado a segundos)
+Energía Total Ideal = Voltage_Li-Ion x Capacidad_Li-Ion = 3,7volts x 1.500mAh = 5550 mWh = 5,55 Wh = 19.980.000 mWs (llevado a segundos)
 
-Usando estrategias de reducción de energía, se define el ciclo de potencia de un circuito como sigue:
+Energía Total Disponible = 0,85 x Energia Total Ideal = 16.983.000 mWs
 
-Energía_Ciclo = Voltage_Circuito x (tEncendido X Iencendido + tApagado x Iapagado)
+Usando un circuito de controlador con sensores que en total consumen 40 miliAmperios con alimentación de 5Voltios, la Potencia disipada real será:
+
+Potencia Real = 5Voltios x 40 miliAmperios = 200 miliWatts = 0,2 Watts
+
+Si se mantiene siempre funcionando, por ejemplo por 12 segundos, la Energía total consumida sería:
+
+Energía Total Consumida_12segundos = 200 mW x 12 segundos = 2400 mW_12segundos
+
+Usando estrategias de reducción de potencia, se define el ciclo de energía de un circuito como sigue:
+
+Energía_Ciclo_tTotal = Voltage_Circuito x (tEncendido X Iencendido + tApagado x Iapagado)
 
 En un caso común de mantener todos los elementos encendidos durante 4 Segundos con un consumo total del orden de 40 miliAmperios y apagar todos los componentes durante 8 Segundos con un consumo total del orden de 10 miliAmperios, entonces el consumo sería:
 
-Energía_Ciclo = 5Voltios x (4s x 40 mA + 8s x 10 mA) = 5Voltios x (160 mAs + 80 mAs) = 
+Energía_Ciclo_12segundos = 5Voltios x (4s x 40 mA + 8s x 10 mA) = 5Voltios x (160 mAs + 80 mAs) = 1.200  mW_12segundos
+
+Comparando el consumo cuando el circuito está siempre energizado con el consumo en un ciclo de trabajo con estrategias de baja potencia:
+
+Energía Total Consumida_12segundos = 2.400 = 200 mWs (prom)
+
+Energía_Ciclo_12segundos = 1.200 = 100 mWs (prom)
+
+resulta que los requerimientos se reducen a la mitad, con lo cual, la duración de la batería llegaría tal vez al doble; una estimación sería, para los casos expuestos la siguiente:
+
+Circuito Energizado Continuamente = 23h 30'
+
+Circuito Energizado periódicamente = 47h 10'
+
+En la práctica, es común mantener plazos de inactividad del orden de los 30 segundos, con lo cual el ejemplo arrojaría una duración del orden de:
+
+
 
 ## COMUNICACIONES
 

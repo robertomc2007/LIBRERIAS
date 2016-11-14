@@ -103,9 +103,11 @@ Circuito Energizado Continuamente = 23h 30'
 
 Circuito Energizado periódicamente = 47h 10'
 
-En la práctica, es común mantener plazos de inactividad del orden de los 30 segundos, con lo cual el ejemplo arrojaría una duración del orden de:
+En la práctica, es común mantener plazos de inactividad del orden de los 30 segundos, y obtener reducciones de corriente eléctrica en los módulos del orden de 100 microAmperios (0,1 miliAmperios) con lo cual el ejemplo arrojaría una duración del orden de:
 
+Energía_Ciclo_34segundos = 5Voltios x (4s x 40 mA + 30s x 0,1 mA) = 5Voltios x (160 mAs + 3 mAs) = 5V x 163 mAs (34 segundos) = 24 mWs
 
+Es decir, 196,5635 horas, o sea, 8 días 4 horas y 33 minutos.
 
 ## COMUNICACIONES
 

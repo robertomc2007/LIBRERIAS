@@ -60,12 +60,12 @@ Supongamos que tenemos una bateria de 6V 4AH, y nuestro modelo consume 2A (supon
 
 ### Cálculo estimado de la autonomía en baterias Li-Ion (Sin corrección de Peukert. Consumos constantes inferiores a 0,2 Amperios)
 
-La aproximación se efectúa desde el punto de vista energético y se comienza estimando la potencia disponible para alimentar un circuito electrónico desde una celda del tipo Li-Ion. Por ejemplo las características de la celda pueden ser:
+La aproximación se efectúa desde el punto de vista energético y se comienza estimando la energía disponible para alimentar un circuito electrónico desde una celda del tipo Li-Ion. Por ejemplo las características de la celda pueden ser:
 
 Capacidad: 1.500 mAh
 Voltaje:   3,7V
 
-Los circuitos electrónicos se limentan con tensiones nominales de 3,3Voltios o 5Voltios, por lo tanto una adecuación a estos valores debe hacerse por medio de un regulador que oficie de fuente adecuada. La eficiencia promedio de estos reguladores se estima en:
+Los circuitos electrónicos se alimentan con tensiones nominales de 3,3 Voltios o 5 Voltios, por lo tanto una adecuación a estos valores debe hacerse por medio de un regulador que oficie de fuente adecuada. La eficiencia promedio de estos reguladores se estima en:
 
 85% o sea, un factor de 0,85
 
